@@ -17,6 +17,13 @@ end
 desc 'create style'
 task :style do
   style = JSON.load(File.open(FN).read)
+  style['center'] = [
+    138.73779,
+    35.34613
+  ]
+  style['zoom'] = 13.6
+  style['bearing'] = 0
+  style['pitch'] = 82
   style['sources']['h'] = {
     :maxzoom => 13,
     :minzoom => 3,
